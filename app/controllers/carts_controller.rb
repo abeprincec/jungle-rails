@@ -1,5 +1,8 @@
 class CartsController < ApplicationController
-  def show
+   def show
+    if cart.empty?
+      redirect_to "/",   flash: {notice: "Your cart is empty"}
+    end
   end
 
   def add_item

@@ -15,6 +15,9 @@
 <% else %>
   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 <% end %>
+<% if notice %>
+<p<%= notice %></p>
+<% end %>
 
   <main class="container">
     <%= yield %>
