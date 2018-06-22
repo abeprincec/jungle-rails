@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+<h1>Order #<%= @order.id %></h1>
+
+  <div class="order-summary jumbotron">
+    <h4>Thank you for your order! <%= @order.email %></h4>
+  </div>
+      <p> Your order total is <%= @order.total %> </p>
+        <%  @order.line_items.each  do |item| %>
+        <p>  <%= item.product.name  %>  </p>
+        <span><%= item.quantity %></span>
+          <% end %>
+  </body>
+  </html>

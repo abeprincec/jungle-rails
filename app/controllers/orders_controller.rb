@@ -55,6 +55,8 @@ class OrdersController < ApplicationController
       end
     end
     order.save!
+    OrderReceipt.order_receipt(order).deliver_now
+
     order
   end
 
