@@ -44,6 +44,9 @@ group :development, :test do
   gem 'byebug'
   gem 'quiet_assets'
   gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_bot'
+
 end
 
 group :development do

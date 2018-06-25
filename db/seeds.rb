@@ -36,7 +36,7 @@ puts "Re-creating Products ..."
 
 Product.destroy_all
 
- cat1.products.create!({
+cat1.products.create!({
   name: 'Men\'s Classy shirt',
   description: Faker::Hipster.paragraph(4),
   image: open_asset("apparel1.jpg"),
@@ -44,7 +44,7 @@ Product.destroy_all
   price: 64.99,
 })
 
- cat1.products.create!({
+cat1.products.create!({
   name: 'Women\'s Zebra pants',
   description: Faker::Hipster.paragraph(4),
   image: open_asset("apparel2.jpg"),
@@ -132,7 +132,6 @@ cat3.products.create!({
   price: 2_483.75,
 })
 
-
 h = BCrypt::Password.create("test")
 
 user = User.find_or_create_by!({
@@ -140,7 +139,7 @@ user = User.find_or_create_by!({
   firstname: "Abr",
   lastname: "Pri",
   email: "abeprincec@gmail.com",
-  password_digest: h
+  password_digest: h,
 
 })
 
@@ -149,13 +148,13 @@ prod1 = Product.find(12)
 prod1.reviews.create!({
   user_id: 1,
   rating: 5,
-  description: "Good product"
+  description: "Good product",
 })
 
 prod1.reviews.create!({
   user_id: 1,
   rating: 5,
-  description: "Bad product"
+  description: "Bad product",
 })
 
 puts "DONE!"
